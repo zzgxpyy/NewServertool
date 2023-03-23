@@ -3,8 +3,8 @@
 yum update
 yum install -y vim unzip nmap python3 git nodejs
 sed -i 's/#Port .*/Port 65522/g' /etc/ssh/sshd_config   
-wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
 rm -rf go1.18.1.linux-amd64.tar.gz      
 echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 echo 'export PATH=$PATH:/root/go/bin' >> /etc/profile
