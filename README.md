@@ -2,6 +2,20 @@
 ```shell
 yum update
 yum install -y vim unzip nmap python3 git nodejs
+#sudo yum install -y yum-utils
+$ sudo yum-config-manager \
+    --add-repo \
+    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+$ sudo sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.repos.d/docker-ce.repo
+
+# 官方源
+# $ sudo yum-config-manager \
+#     --add-repo \
+#     https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce docker-ce-cli containerd.io
+sudo systemctl enable docker
+sudo systemctl start docker
 sed -i 's/#Port .*/Port 65522/g' /etc/ssh/sshd_config   
 wget https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
